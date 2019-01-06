@@ -9,7 +9,7 @@ export const search = (query, type) => {
     method: 'GET',
     headers: {
       Accept: 'application/json',
-      Authorization: 'Bearer ' + token
+      Authorization: `Bearer ${token}`,
     }
   };
   return fetch(`${API_URL}/search?q=${query}&type=${type}`, config).then(toJSON);
